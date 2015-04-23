@@ -21,6 +21,9 @@ pip install virtualenv
 virtualenv venv
 chown -R vagrant:vagrant venv
 
+cd /home/vagrant/algos-index
+docker build -t docker.algos.com/algos-index .
+
 cd /home/vagrant/algos-ui
 docker build -t docker.algos.com/algos-ui .
 
