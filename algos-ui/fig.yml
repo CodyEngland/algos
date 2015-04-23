@@ -1,0 +1,11 @@
+algosgui:
+  image: docker.algos.com/algos-ui:latest
+  expose:
+   - "80"
+  ports:
+   - "80:9080"
+  volumes:
+   # - ./public:/usr/share/nginx/html
+   - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+  hostname: algos-gui
+  domainname: algos.com
