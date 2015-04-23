@@ -5,7 +5,7 @@ algosgui:
   ports:
    - "9000:80"
   volumes:
-   # - ./public:/usr/share/nginx/html
-   - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+   - ./public:/usr/share/nginx/html
+   #- ./nginx/nginx.conf:/etc/nginx/nginx.conf
   hostname: algos-gui
   domainname: algos.com
