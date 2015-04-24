@@ -1,51 +1,48 @@
-*~
-*.class
-*.DS_Store
-*.pyc
+# Composer
+vendor
+composer.phar
 
-# Package Files #
-*.ear
+# IntelliJ - PhpStorm and PyCharm
+.idea
+*.ipr
+*.iws
 
-*.iml
+# Logs
+logs
+error.log
+access.log
 
-vagrant/centos/.vagrant
-vagrant/ubuntu/.vagrant
-vagrant/ubuntu-trusty/.vagrant
+# Netbeans
+nbproject
+.nbproject
+.nbproject/*
+nbproject/*
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+nbactions.xml
+nb-configuration.xml
 
-vagrant/ubuntu/.vagrant/machines/default/virtualbox/action_provision
+# Mac OSX
+.DS_Store
+# Thumbnails
+._*
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
 
-vagrant/ubuntu/.vagrant/machines/default/virtualbox/action_set_name
+# SublimeText project files
+/*.sublime-project
+*.sublime-workspace
 
-vagrant/ubuntu/.vagrant/machines/default/virtualbox/id
+# Dart
+packages
+packages/*
 
-.idea/
+# Vagrant
+.vagrant
+.vagrant/*
 
-ansible/roles/solr-reusable
-
-ansible/roles/tiling-agent/tasks/main.yml
-
-ansible/inventories/tiling-agents
-
-vagrant/centos/.vagrant/machines/default/virtualbox/action_provision
-
-vagrant/centos/.vagrant/machines/default/virtualbox/action_set_name
-
-vagrant/centos/.vagrant/machines/default/virtualbox/id
-
-ansible/inventories/solr-cloud
-
-ansible/inventories/solr-rufus
-
-ansible/solr-cloud.yml
-
-ansible/roles/zookeeper/tasks/main.yml
-
-ansible/inventories/solr-amazon
-
-ansible/inventories/profiles-nectar
-
-ansible/inventories/profiles
-
-ansible/machine_audit
-
-ansible/inventories/spatial-setup
+.env
