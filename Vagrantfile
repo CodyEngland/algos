@@ -9,6 +9,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine.
   config.vm.network "forwarded_port", guest: 9000, host: 9000
+  config.vm.network "forwarded_port", guest: 9001, host: 9001
 
   config.vm.synced_folder "./algos-ui", "/home/vagrant/algos-ui", type: "rsync", rsync__exclude: ".git/"
   config.vm.synced_folder "./algos-index", "/home/vagrant/algos-index", type: "rsync", rsync__exclude: ".git/"

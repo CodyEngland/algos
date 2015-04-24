@@ -1,22 +1,30 @@
-FROM ubuntu:14.04
+FROM ubuntu
 
+# Add the application resources URL
+RUN echo "deb http://archive.ubuntu.com/ubuntu/ $(lsb_release -sc) main universe" >> /etc/apt/sources.list
+
+# Update the sources list
 RUN apt-get update
 
-# Install pip's dependdency: setuptools:
-RUN apt-get install -y python \
-                       python-pip \
-                       python-dev \
-                       python-distribute \
-                       git \
-                       vim \
-                       wget \
-                       tar
+# Install basic applications
+RUN apt-get install -y tar git curl nano wget dialog net-tools build-essential
 
-RUN apt-get clean all
+# Install Python and Basic Python Tools
+RUN apt-get install -y python python-dev python-distribute python-pip
 
-# Download and install Flask framework:
-RUN pip install flask
+# Copy the application folder inside the container
+ADD /algos-index /algos-index
 
-EXPOSE 5000
+# Get pip to download and install requirements:
+RUN pip install -r /algos-index/requirements.txt
 
-CMD ["python"]
+# Expose ports
+EXPOSE 80
+
+# Set the default directory where CMD will execute
+WORKDIR /algos-index
+
+# Set the default command to execute    
+# when creating a new container
+# i.e. using CherryPy to serve the application
+CMD python server.py

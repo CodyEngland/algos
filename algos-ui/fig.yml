@@ -9,3 +9,11 @@ algosgui:
    #- ./nginx/nginx.conf:/etc/nginx/nginx.conf
   hostname: algos-gui
   domainname: algos.com
+algosindex:
+    image: docker.algos.com/algos-index:latest
+    expose:
+    - "80"
+    ports: 
+    - "9001:80"
+    hostname: algos-index
+    domainname: algos.com
